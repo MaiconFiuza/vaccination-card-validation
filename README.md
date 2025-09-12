@@ -37,7 +37,7 @@ A aplicação estará disponível nas seguintes URL:
     http://localhost:8080/
    
 
-As collections do postman se encontram no seguinte link: [Collection Postman]()
+As collections do postman se encontram no seguinte link: [Collection Postman](https://github.com/MaiconFiuza/vaccination-card-validation/blob/main/Projeto%20M%C3%B3dulo%205.postman_collection.json)
 
 
 ### Cobertura de testes
