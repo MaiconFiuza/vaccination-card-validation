@@ -1,0 +1,9 @@
+CREATE TABLE users (
+    id UUID PRIMARY KEY,
+    cpf VARCHAR(11) NOT NULL UNIQUE,
+    name VARCHAR(255) NOT NULL,
+    cns VARCHAR(15) NOT NULL UNIQUE,
+    email VARCHAR(255) NOT NULL,
+    phone VARCHAR(20) NOT NULL,
+    birthdate DATE NOT NULL
+);
