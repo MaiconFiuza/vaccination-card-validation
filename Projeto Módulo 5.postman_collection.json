@@ -1,0 +1,259 @@
+{
+	"info": {
+		"_postman_id": "a999f103-90a8-4819-830a-a4012ded8174",
+		"name": "Projeto Módulo 5",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11790433"
+	},
+	"item": [
+		{
+			"name": "send vaccinnation card",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-user-email",
+						"value": "teste.silva@teste.com",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "frontCard",
+							"type": "file",
+							"src": "/C:/Users/maico/Downloads/IMG_20201014_231022_388.jpg"
+						},
+						{
+							"key": "backCard",
+							"type": "file",
+							"src": "/C:/Users/maico/Downloads/IMG-20200720-WA0031.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/vaccination-card",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vaccination-card"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create vaccinnation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-user-email",
+						"value": "teste.silva@teste.com",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Gripe\",\r\n    \"date\": \"2025-08-07\",\r\n    \"type\": \"TERCEIRA_DOSE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/vaccination/c0e9ad51-b0a1-4a9f-bec4-4a0c2dd1b7d6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vaccination",
+						"c0e9ad51-b0a1-4a9f-bec4-4a0c2dd1b7d6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete vaccinnation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-user-email",
+						"value": "teste.silva@teste.com",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Gripe\",\r\n    \"date\": \"2025-08-07\",\r\n    \"type\": \"TERCEIRA_DOSE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/vaccination/c0e9ad51-b0a1-4a9f-bec4-4a0c2dd1b7d6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vaccination",
+						"c0e9ad51-b0a1-4a9f-bec4-4a0c2dd1b7d6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get vaccinnation card",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-user-email",
+						"value": "teste.silva@teste.com",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/vaccination-card/c0e9ad51-b0a1-4a9f-bec4-4a0c2dd1b7d6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vaccination-card",
+						"c0e9ad51-b0a1-4a9f-bec4-4a0c2dd1b7d6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all vaccinnation card",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-user-email",
+						"value": "teste.silva@teste.com",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/vaccination-card",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vaccination-card"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get vaccinnation card by email",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-user-email",
+						"value": "teste.silva@teste.com",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/vaccination-card/email/teste.silva@teste.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vaccination-card",
+						"email",
+						"teste.silva@teste.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user by email",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-user-email",
+						"value": "teste.silva@teste.com",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/user/teste.silva@teste.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"teste.silva@teste.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update vaccinnation card by id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-user-email",
+						"value": "teste.silva@teste.com",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"status\": \"REFUSED\",\r\n    \"message\": \"Foto não está legivel, por favor refaça o envio\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/vaccination-card/c0e9ad51-b0a1-4a9f-bec4-4a0c2dd1b7d6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vaccination-card",
+						"c0e9ad51-b0a1-4a9f-bec4-4a0c2dd1b7d6"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
