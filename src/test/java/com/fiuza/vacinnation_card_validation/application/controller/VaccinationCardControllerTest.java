@@ -7,12 +7,13 @@ import com.fiuza.vacinnation_card_validation.core.entities.VaccinationCard;
 import com.fiuza.vacinnation_card_validation.core.enums.Status;
 import com.fiuza.vacinnation_card_validation.core.usecases.vacinnation_card.*;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.mock.web.MockMultipartFile;
-import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
 
 import java.util.List;
@@ -34,22 +35,22 @@ class VaccinationCardControllerTest {
     @Autowired
     private ObjectMapper objectMapper;
 
-    @MockitoBean
+    @MockBean
     private SendVaccinationCardUseCase sendVaccinationCardUseCase;
 
-    @MockitoBean
+    @MockBean
     private GetVaccinationCardByIdUseCase getVaccinationCardByIdUseCase;
 
-    @MockitoBean
+    @MockBean
     private GetVaccinationCardByEmailUseCase getVaccinationCardByEmailUseCase;
 
-    @MockitoBean
+    @MockBean
     private UpdateVaccinationCardByIdUseCase updateVaccinationCardByIdUseCase;
 
-    @MockitoBean
+    @MockBean
     private GetAllVaccinationCardByEmailUseCase getAllVaccinationCardByEmailUseCase;
 
-    @MockitoBean
+    @MockBean
     private DeleteVaccinationCardByIdUseCase deleteVaccinationCardByIdUseCase;
 
     @Test
