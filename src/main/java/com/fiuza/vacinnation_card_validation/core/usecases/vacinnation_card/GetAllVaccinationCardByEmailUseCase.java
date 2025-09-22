@@ -13,7 +13,9 @@ public class GetAllVaccinationCardByEmailUseCase {
         this.vaccinationCardGateway = vaccinationCardGateway;
     }
 
-    public List<VaccinationCard> execute() {return (List<VaccinationCard>) vaccinationCardGateway.findAll()
-            .stream().filter(card -> card.getStatus()== Status.RECEIVED);
+    public List<VaccinationCard> execute() {return vaccinationCardGateway.findAll()
+            .stream()
+            .filter(card -> card.getStatus() == Status.RECEIVED)
+            .toList();
     }
 }
