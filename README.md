@@ -50,6 +50,6 @@ O relatório de cobertura pode ser encontrado dentro da pasta `./target`. Para a
 
 > taget/site/jacoco/index.html
 
-### Vídeo de apresentação do projeto
+<img width="1343" height="482" alt="image" src="https://github.com/user-attachments/assets/b577c208-a0ee-491f-904d-cc3951f0a902" />
 
-O Vídeo de apresentação se encontra no seguinte (link)[]
+
